@@ -35,6 +35,7 @@ namespace ST10339549_PROG7311_POE_PART2.Controllers
                 {
                     identity = new ClaimsIdentity(new[]
                     {
+                        new Claim(ClaimTypes.NameIdentifier, farmer.FarmerId.ToString()),
                         new Claim(ClaimTypes.Name, farmer.FarmerName),
                         new Claim(ClaimTypes.Role, "Farmer")
                     }, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -48,6 +49,7 @@ namespace ST10339549_PROG7311_POE_PART2.Controllers
                 {
                     identity = new ClaimsIdentity(new[]
                     {
+                        new Claim(ClaimTypes.NameIdentifier, employee.EmployeeId.ToString()),
                         new Claim(ClaimTypes.Name, employee.EmployeeName),
                         new Claim(ClaimTypes.Role, "Employee")
                     }, CookieAuthenticationDefaults.AuthenticationScheme);

@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ST10339549_PROG7311_POE_PART2.Models;
 using ST10339549_PROG7311_POE_PART2.Repository.Interfaces;
+using System.Security.Claims;
 
 namespace ST10339549_PROG7311_POE_PART2.Controllers
 {
@@ -22,16 +23,17 @@ namespace ST10339549_PROG7311_POE_PART2.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-            // Assume FarmerId is somehow retrieved from session or context
-            model.FarmerId = 1; // placeholder
+            // Get FarmerId from claims
+            model.FarmerId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
             await _productRepo.AddAsync(model);
             return RedirectToAction("MyProducts");
         }
 
         public async Task<IActionResult> MyProducts()
         {
-            // Assume FarmerId is somehow retrieved from session or context
-            var products = await _productRepo.GetByFarmerIdAsync(1); // placeholder
+            // Get FarmerId from claims
+            int farmerId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            var products = await _productRepo.GetByFarmerIdAsync(farmerId);
             return View(products);
         }
     }
