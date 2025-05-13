@@ -1,13 +1,17 @@
 using Dapper;
 using ST10339549_PROG7311_POE_PART2.Models;
 using ST10339549_PROG7311_POE_PART2.Repository.Interfaces;
+using Microsoft.Extensions.Logging;
 
 namespace ST10339549_PROG7311_POE_PART2.Repository
 {
     public class EmployeeRepository : RepositoryBase, IEmployeeRepository
     {
-        public EmployeeRepository(IConfiguration configuration) : base(configuration)
+        private readonly ILogger<EmployeeRepository> _logger;
+
+        public EmployeeRepository(IConfiguration configuration, ILogger<EmployeeRepository> logger = null) : base(configuration)
         {
+            _logger = logger;
         }
 
         public async Task<IEnumerable<Employee>> GetAllAsync()
@@ -81,10 +85,25 @@ namespace ST10339549_PROG7311_POE_PART2.Repository
         {
             var employee = await GetByEmailAsync(email);
             if (employee == null)
+            {
+                _logger?.LogWarning("Failed login attempt for non-existent employee email: {Email}", email);
                 return false;
+            }
 
-            // Use the password verification method from the base class
-            return VerifyPassword(employee.EmployeePasswordHash, password);
+            bool isValid = VerifyPassword(employee.EmployeePasswordHash, password);
+            
+            if (!isValid)
+            {
+                _logger?.LogWarning("Failed login attempt for employee: {EmployeeId}, Email: {Email}, Role: {Role}", 
+                    employee.EmployeeId, email, employee.EmployeeRoleTitle);
+            }
+            else
+            {
+                _logger?.LogInformation("Successful login for employee: {EmployeeId}, Email: {Email}, Role: {Role}", 
+                    employee.EmployeeId, email, employee.EmployeeRoleTitle);
+            }
+
+            return isValid;
         }
     }
 }

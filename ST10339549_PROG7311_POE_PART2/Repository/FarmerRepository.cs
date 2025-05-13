@@ -3,13 +3,17 @@ using ST10339549_PROG7311_POE_PART2.Models;
 using ST10339549_PROG7311_POE_PART2.Repository.Interfaces;
 using System.Security.Cryptography;
 using System.Text;
+using Microsoft.Extensions.Logging;
 
 namespace ST10339549_PROG7311_POE_PART2.Repository
 {
     public class FarmerRepository : RepositoryBase, IFarmerRepository
     {
-        public FarmerRepository(IConfiguration configuration) : base(configuration)
+        private readonly ILogger<FarmerRepository> _logger;
+
+        public FarmerRepository(IConfiguration configuration, ILogger<FarmerRepository> logger = null) : base(configuration)
         {
+            _logger = logger;
         }
 
         public async Task<IEnumerable<Farmer>> GetAllAsync()
@@ -83,10 +87,25 @@ namespace ST10339549_PROG7311_POE_PART2.Repository
         {
             var farmer = await GetByEmailAsync(email);
             if (farmer == null)
+            {
+                _logger?.LogWarning("Failed login attempt for non-existent farmer email: {Email}", email);
                 return false;
+            }
 
-            // Use the password verification method from the base class
-            return VerifyPassword(farmer.FarmerPasswordHash, password);
+            bool isValid = VerifyPassword(farmer.FarmerPasswordHash, password);
+            
+            if (!isValid)
+            {
+                _logger?.LogWarning("Failed login attempt for farmer: {FarmerId}, Email: {Email}", 
+                    farmer.FarmerId, email);
+            }
+            else
+            {
+                _logger?.LogInformation("Successful login for farmer: {FarmerId}, Email: {Email}", 
+                    farmer.FarmerId, email);
+            }
+
+            return isValid;
         }
     }
 }
