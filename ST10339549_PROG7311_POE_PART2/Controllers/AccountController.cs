@@ -56,11 +56,20 @@ namespace ST10339549_PROG7311_POE_PART2.Controllers
                 }
             }
 
-            if (!isValid) return View();
+            if (!isValid) 
+            {
+                ViewBag.LoginError = "Invalid email, password, or role selected.";
+                return View();
+            }
 
             var principal = new ClaimsPrincipal(identity);
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
-            return RedirectToAction("Index", "Home");
+            
+            // Redirect to role-specific pages
+            if (role == UserRole.Farmer)
+                return RedirectToAction("MyProducts", "Farmer");
+            else
+                return RedirectToAction("AllFarmers", "Employee");
         }
 
         public async Task<IActionResult> Logout()
