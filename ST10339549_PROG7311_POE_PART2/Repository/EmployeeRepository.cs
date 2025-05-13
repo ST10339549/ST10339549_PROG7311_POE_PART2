@@ -37,6 +37,9 @@ namespace ST10339549_PROG7311_POE_PART2.Repository
             using var connection = CreateConnection();
             entity.CreatedAt = DateTime.Now;
             
+            // Hash the password before storing
+            entity.EmployeePasswordHash = HashPassword(entity.EmployeePasswordHash);
+            
             var sql = @"
                 INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, 
                                       EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt)
@@ -80,8 +83,8 @@ namespace ST10339549_PROG7311_POE_PART2.Repository
             if (employee == null)
                 return false;
 
-            // This is a simple password verification - in a real app, use proper password hashing
-            return employee.EmployeePasswordHash == password;
+            // Use the password verification method from the base class
+            return VerifyPassword(employee.EmployeePasswordHash, password);
         }
     }
 }

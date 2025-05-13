@@ -39,6 +39,9 @@ namespace ST10339549_PROG7311_POE_PART2.Repository
             using var connection = CreateConnection();
             entity.CreatedAt = DateTime.Now;
             
+            // Hash the password before storing
+            entity.FarmerPasswordHash = HashPassword(entity.FarmerPasswordHash);
+            
             var sql = @"
                 INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, 
                                      FarmerAddress, CreatedAt)
@@ -82,8 +85,8 @@ namespace ST10339549_PROG7311_POE_PART2.Repository
             if (farmer == null)
                 return false;
 
-            // This is a simple password verification - in a real app, use proper password hashing
-            return farmer.FarmerPasswordHash == password;
+            // Use the password verification method from the base class
+            return VerifyPassword(farmer.FarmerPasswordHash, password);
         }
     }
 }
