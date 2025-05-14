@@ -46,68 +46,68 @@ CREATE TABLE Products (
 -- ================
 
 -- Password: 62jMW7z
-INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Kaitlin Levy', 'kaitlin.levy@agrienergy.com', '8ca5631a1235b3069cb650511fae72d23938224bdfa5555b93e137c979edd2aa', 'Coordinator', '001-704-223-2689x898', '2025-05-14 13:00:14');
+INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Kaitlin Levy', 'kaitlin.levy@agrienergy.com', '8ca5631a1235b3069cb650511fae72d23938224bdfa5555b93e137c979edd2aa', 'Coordinator', '+27 71 223 2689', '2025-05-14 13:00:14');
 
 -- Password: X5Cses
-INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Holly Benjamin', 'holly.benjamin@agrienergy.com', 'c24fad4115787ffb1822ec887a2a732ccdbb775459b9b00a30c236af31a996f5', 'Field Agent', '(550)542-9616', '2025-05-14 13:00:14');
+INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Holly Benjamin', 'holly.benjamin@agrienergy.com', 'c24fad4115787ffb1822ec887a2a732ccdbb775459b9b00a30c236af31a996f5', 'Field Agent', '072 542 9616', '2025-05-14 13:00:14');
 
 -- Password: SS7F7Ub
-INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Tracy Hansen', 'tracy.hansen@agrienergy.com', '0c10bd574018ec91a1aa1f2385e7dbccae2ae72597ddbcc728d091b6793a3162', 'Coordinator', '001-285-282-2494x78200', '2025-05-14 13:00:14');
+INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Tracy Hansen', 'tracy.hansen@agrienergy.com', '0c10bd574018ec91a1aa1f2385e7dbccae2ae72597ddbcc728d091b6793a3162', 'Coordinator', '+27 82 282 2494', '2025-05-14 13:00:14');
 
 -- Password: 4FLdvNvI2
-INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Jennifer Smith', 'jennifer.smith@agrienergy.com', '86445c5ae26dc3c94b0eeed061f12d52744d31ff677c2c4a320abbb55715d834', 'Coordinator', '8035826098', '2025-05-14 13:00:14');
+INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Jennifer Smith', 'jennifer.smith@agrienergy.com', '86445c5ae26dc3c94b0eeed061f12d52744d31ff677c2c4a320abbb55715d834', 'Coordinator', '083 582 6098', '2025-05-14 13:00:14');
 
 -- Password: n4ZWsHtYrc
-INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Stephanie Scott', 'stephanie.scott@agrienergy.com', 'a51a19b2a2f8a14863e420371f2cb2841d8de7c3218276e30c57cbbcb6a5f332', 'Coordinator', '766-327-4077', '2025-05-14 13:00:14');
+INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Stephanie Scott', 'stephanie.scott@agrienergy.com', 'a51a19b2a2f8a14863e420371f2cb2841d8de7c3218276e30c57cbbcb6a5f332', 'Coordinator', '+27 76 327 4077', '2025-05-14 13:00:14');
 
 -- Password: V7PlY6I
-INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Abigail Clayton', 'abigail.clayton@agrienergy.com', 'e3bac93b37fb1241795e9acf390eec619a06e16cda43770b503e1b63b5689d84', 'Operations', '4203062391', '2025-05-14 13:00:14');
+INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Abigail Clayton', 'abigail.clayton@agrienergy.com', 'e3bac93b37fb1241795e9acf390eec619a06e16cda43770b503e1b63b5689d84', 'Operations', '084 306 2391', '2025-05-14 13:00:14');
 
 -- Password: TYA0Zfu
-INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Christopher Brown', 'christopher.brown@agrienergy.com', '7ddea7f8eb590d9c0612254e099ada88546a6508fa306b2890a3384e92ea647d', 'Field Agent', '001-925-279-5210x560', '2025-05-14 13:00:14');
+INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Christopher Brown', 'christopher.brown@agrienergy.com', '7ddea7f8eb590d9c0612254e099ada88546a6508fa306b2890a3384e92ea647d', 'Field Agent', '+27 79 279 5210', '2025-05-14 13:00:14');
 
 -- Password: 3gxCnCY
-INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Nicholas Hernandez', 'nicholas.hernandez@agrienergy.com', '5c04a13062d52e69a0381f93a47d7026eba9c2d3dee19e1532a7ce8e82c3d159', 'Operations', '645.486.1715x208', '2025-05-14 13:00:14');
+INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Nicholas Hernandez', 'nicholas.hernandez@agrienergy.com', '5c04a13062d52e69a0381f93a47d7026eba9c2d3dee19e1532a7ce8e82c3d159', 'Operations', '061 486 1715', '2025-05-14 13:00:14');
 
 -- Password: 1N5Mpx
-INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Bruce Aguilar', 'bruce.aguilar@agrienergy.com', 'c36b1f7e0e69281aa65759a645baf7675d9bdea9023634073ab93f150f645c32', 'Operations', '(738)727-7455', '2025-05-14 13:00:14');
+INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Bruce Aguilar', 'bruce.aguilar@agrienergy.com', 'c36b1f7e0e69281aa65759a645baf7675d9bdea9023634073ab93f150f645c32', 'Operations', '+27 73 727 7455', '2025-05-14 13:00:14');
 
 -- Password: 3wS4Nag
-INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Amber David', 'amber.david@agrienergy.com', '99002ddb3d805c1e61a4f9c79c3f2b7fd64310e8abf4ad2f4c63c1cb9682f3cd', 'Operations', '+1-141-655-0945', '2025-05-14 13:00:14');
+INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Amber David', 'amber.david@agrienergy.com', '99002ddb3d805c1e61a4f9c79c3f2b7fd64310e8abf4ad2f4c63c1cb9682f3cd', 'Operations', '064 655 0945', '2025-05-14 13:00:14');
 
 -- ==============
 -- FARMER INSERTS
 -- ==============
 
 -- Password: 4DG0bgy
-INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Makayla Bryant', 'makayla.bryant@agrifarm.com', 'b5134922a20ce0051f61c6ddf69ba99e94cffabcdae737ac6dea3624521cb9ea', '(138)486-8122', '35525 Emma Creek Apt. 462, Ryanland, UT 23409', '2025-05-14 13:00:14');
+INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Makayla Bryant', 'makayla.bryant@agrifarm.com', 'b5134922a20ce0051f61c6ddf69ba99e94cffabcdae737ac6dea3624521cb9ea', '078 486 8122', '35525 Emma Creek Apt. 462, Ryanland, UT 23409', '2025-05-14 13:00:14');
 
 -- Password: iKGmOLwM3
-INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Denise Rocha', 'denise.rocha@agrifarm.com', '3ef3ca4be11f042123886775d37cf1a41f5595386e62b58cf600f7ef677e9449', '+1-668-463-6127x306', '490 David Mews Apt. 548, Michelemouth, AZ 91076', '2025-05-14 13:00:14');
+INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Denise Rocha', 'denise.rocha@agrifarm.com', '3ef3ca4be11f042123886775d37cf1a41f5595386e62b58cf600f7ef677e9449', '+27 66 463 6127', '490 David Mews Apt. 548, Michelemouth, AZ 91076', '2025-05-14 13:00:14');
 
 -- Password: 4S5RpTetU
-INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('James King', 'james.king@agrifarm.com', '66bae0dc6803f0ee84f84a16e46c32c788ea192b26f18f0dea6dc1e1c5640b52', '+1-073-125-5077x958', '445 Cole Village, Howellmouth, OH 42747', '2025-05-14 13:00:14');
+INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('James King', 'james.king@agrifarm.com', '66bae0dc6803f0ee84f84a16e46c32c788ea192b26f18f0dea6dc1e1c5640b52', '073 125 5077', '445 Cole Village, Howellmouth, OH 42747', '2025-05-14 13:00:14');
 
 -- Password: 1B2xbDW
-INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Derek Moreno', 'derek.moreno@agrifarm.com', '95d4bfb271e471063ff582cff606bc297a61103b04395a63be3dfe9f2ab88431', '+1-728-008-6904x7255', '5976 Dennis Crescent Apt. 318, South Christopher, PA 51421', '2025-05-14 13:00:14');
+INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Derek Moreno', 'derek.moreno@agrifarm.com', '95d4bfb271e471063ff582cff606bc297a61103b04395a63be3dfe9f2ab88431', '+27 72 800 6904', '5976 Dennis Crescent Apt. 318, South Christopher, PA 51421', '2025-05-14 13:00:14');
 
 -- Password: 66hWagOsa
-INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Cheryl Johnson', 'cheryl.johnson@agrifarm.com', '6755dcb47de1089543686ecdeef6c3dceb79098cb609c83f4c3314d65cc60073', '(501)491-5332', '8296 Stephen Mountains Apt. 536, Lake Courtneybury, SD 39700', '2025-05-14 13:00:14');
+INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Cheryl Johnson', 'cheryl.johnson@agrifarm.com', '6755dcb47de1089543686ecdeef6c3dceb79098cb609c83f4c3314d65cc60073', '071 491 5332', '8296 Stephen Mountains Apt. 536, Lake Courtneybury, SD 39700', '2025-05-14 13:00:14');
 
 -- Password: 66QiyI5Er
-INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Sean Campbell', 'sean.campbell@agrifarm.com', 'd0d9551deb99ad6e702d2e333cd53df6b13010aee9808b6faf613f598b541069', '659.010.4703x410', '786 Mitchell Square Suite 576, South Wayne, WY 44916', '2025-05-14 13:00:14');
+INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Sean Campbell', 'sean.campbell@agrifarm.com', 'd0d9551deb99ad6e702d2e333cd53df6b13010aee9808b6faf613f598b541069', '+27 65 010 4703', '786 Mitchell Square Suite 576, South Wayne, WY 44916', '2025-05-14 13:00:14');
 
 -- Password: 3Jfn38jrO
-INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Krista Floyd', 'krista.floyd@agrifarm.com', '5dc75f9df5a1b84a7005e7e17778ebc0daeceadb390a31c012abe998859f0345', '(335)504-4114x75080', '661 Richardson Mountain Apt. 604, South Ashley, AR 22141', '2025-05-14 13:00:14');
+INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Krista Floyd', 'krista.floyd@agrifarm.com', '5dc75f9df5a1b84a7005e7e17778ebc0daeceadb390a31c012abe998859f0345', '073 504 4114', '661 Richardson Mountain Apt. 604, South Ashley, AR 22141', '2025-05-14 13:00:14');
 
 -- Password: D6QpCHz
-INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Susan Gonzalez', 'susan.gonzalez@agrifarm.com', '1a248e4174cf4407824976b604fc18eed04de5f5b88e95474f6c8d9976ee54ff', '496-032-0375', '651 Shawn Forks Suite 263, Jonathanport, MA 21383', '2025-05-14 13:00:14');
+INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Susan Gonzalez', 'susan.gonzalez@agrifarm.com', '1a248e4174cf4407824976b604fc18eed04de5f5b88e95474f6c8d9976ee54ff', '+27 74 032 0375', '651 Shawn Forks Suite 263, Jonathanport, MA 21383', '2025-05-14 13:00:14');
 
 -- Password: fSVKf8Ja
-INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Courtney Duke', 'courtney.duke@agrifarm.com', '966eb5eb8271cb81b3408ce421d8c63b958de0eac4db40ecc0dd0061a4f8aafe', '574.230.8050x8485', '1839 Amber Turnpike, Port Elizabethtown, SD 46428', '2025-05-14 13:00:14');
+INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Courtney Duke', 'courtney.duke@agrifarm.com', '966eb5eb8271cb81b3408ce421d8c63b958de0eac4db40ecc0dd0061a4f8aafe', '074 230 8050', '1839 Amber Turnpike, Port Elizabethtown, SD 46428', '2025-05-14 13:00:14');
 
 -- Password: 7NRGwAm
-INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Jared Guzman', 'jared.guzman@agrifarm.com', 'f56e18d990a70f1b2ae82297cbccc2ac5485895e0c46c6031db9387eb0503774', '001-071-237-9577', '306 Le Mountain, Dukechester, PA 83522', '2025-05-14 13:00:14');
+INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Jared Guzman', 'jared.guzman@agrifarm.com', 'f56e18d990a70f1b2ae82297cbccc2ac5485895e0c46c6031db9387eb0503774', '+27 71 237 9577', '306 Le Mountain, Dukechester, PA 83522', '2025-05-14 13:00:14');
 
 -- ===============
 -- PRODUCT INSERTS
