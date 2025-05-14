@@ -1,6 +1,8 @@
 -- =====================================
 -- ========== SCHEMA CREATION ==========
 -- =====================================
+CREATE DATABASE AgriEnergyConnect;
+GO
 
 DROP TABLE IF EXISTS Products;
 DROP TABLE IF EXISTS Farmers;
@@ -39,7 +41,6 @@ CREATE TABLE Products (
     FOREIGN KEY (FarmerId) REFERENCES Farmers(FarmerId)
 );
 
-
 -- ================
 -- EMPLOYEE INSERTS
 -- ================
@@ -73,36 +74,6 @@ INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, Employ
 
 -- Password: 3wS4Nag
 INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Amber David', 'amber.david@agrienergy.com', '99002ddb3d805c1e61a4f9c79c3f2b7fd64310e8abf4ad2f4c63c1cb9682f3cd', 'Operations', '+1-141-655-0945', '2025-05-14 13:00:14');
-
--- Password: 7GPbmdRx
-INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Duane Pace', 'duane.pace@agrienergy.com', '20b8608e0450b848bc461f75c45fa0b1a298a9030bfd8be322c579516264769f', 'Operations', '4644093000', '2025-05-14 13:00:14');
-
--- Password: v50RXc
-INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Stacy Powers', 'stacy.powers@agrienergy.com', 'f0737d51ebb51448ab9dc9df42993e22f6aa8ad0d7842bc9283c79f034ec79e0', 'Field Agent', '166.583.9260x27513', '2025-05-14 13:00:14');
-
--- Password: 2EuKVmo8oV
-INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Eileen Weaver', 'eileen.weaver@agrienergy.com', '1c4cf471a30821af89f5978f420159adfb6e94b7c6e576cae9a9db21153e0ec0', 'Field Agent', '(912)912-4822', '2025-05-14 13:00:14');
-
--- Password: K8ZR7Eftk1
-INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Tracy Kim', 'tracy.kim@agrienergy.com', '58170001102668625b786f6d192a76d8d514a37acdfc1c068dd29c6c35d0b219', 'Operations', '(045)073-1323x7283', '2025-05-14 13:00:14');
-
--- Password: O9aCkgw
-INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Brian Wright', 'brian.wright@agrienergy.com', '92a6592147ebe975ea0417407d5a5f2f246abe33de5b4c1c730edd151202e6dd', 'Operations', '+1-826-185-8917x0926', '2025-05-14 13:00:14');
-
--- Password: Ie7Cg8
-INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Albert Perkins', 'albert.perkins@agrienergy.com', '9a897f81d8ecc24451f8f54b1d7f525802be6ee44feaaa955caa3a5ed1427ca2', 'Field Agent', '+1-893-056-8927', '2025-05-14 13:00:14');
-
--- Password: bf4KgQiPLi
-INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Rebecca Waller', 'rebecca.waller@agrienergy.com', '33b0b96776f0d4cf266871f75861478ba26b5720762780de6c40fc8f43f3a535', 'Operations', '2433855023', '2025-05-14 13:00:14');
-
--- Password: 6IHdagwpM
-INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Alice White', 'alice.white@agrienergy.com', 'a547f6786082539bd927c74fe5103afe451475d10427328ac930e4474aa2b9a6', 'Coordinator', '+1-548-759-4457', '2025-05-14 13:00:14');
-
--- Password: xS7OKJrd6
-INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('James Lynch', 'james.lynch@agrienergy.com', '053d39cd1c101f4e6fade9404a4ec601f6cc8a4c2b2a04cc50833f82cdb8fd5e', 'Coordinator', '796.016.0189x464', '2025-05-14 13:00:14');
-
--- Password: K2WiXvCnHZ
-INSERT INTO Employees (EmployeeName, EmployeeEmail, EmployeePasswordHash, EmployeeRoleTitle, EmployeePhoneNumber, CreatedAt) VALUES ('Ralph Henry', 'ralph.henry@agrienergy.com', 'a69ee9bdcec388cc3b5910beff83639834d345e7bb950673a01eada6fd246bfa', 'Operations', '+1-274-307-7372x4050', '2025-05-14 13:00:14');
 
 -- ==============
 -- FARMER INSERTS
@@ -138,58 +109,79 @@ INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNum
 -- Password: 7NRGwAm
 INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Jared Guzman', 'jared.guzman@agrifarm.com', 'f56e18d990a70f1b2ae82297cbccc2ac5485895e0c46c6031db9387eb0503774', '001-071-237-9577', '306 Le Mountain, Dukechester, PA 83522', '2025-05-14 13:00:14');
 
--- Password: JnKNEpHf5
-INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Nathan Johnson', 'nathan.johnson@agrifarm.com', 'e6205454d6dce6e19398f68ec93d12b6b5021c77db95adb778186283afb2fe5f', '(743)709-6725', '7258 Wells Radial Apt. 374, East Nancy, WV 08360', '2025-05-14 13:00:14');
-
--- Password: GrYrsr6O2
-INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Andrea Jennings', 'andrea.jennings@agrifarm.com', '773ca881f3df0e7bf1d88a29559f2c8439dca2534cba05ca51d0ca0e22e74561', '+1-073-691-8478x519', '2272 Megan Inlet Apt. 679, Andrewton, TN 74546', '2025-05-14 13:00:14');
-
--- Password: 4X7W2UeDYD
-INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Christopher Sanchez', 'christopher.sanchez@agrifarm.com', '7c5b5db08d0425315282fb5be8a3267cf95a4f604d461b50d18637405c2a805c', '522.195.9249', '9646 Brittany Station, East Johnbury, IN 75980', '2025-05-14 13:00:14');
-
--- Password: n68BdG4dN
-INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Courtney Mckay', 'courtney.mckay@agrifarm.com', '9b752c7fef046839d80194af2b06910bbede12d7e8bab1f6475ffe9a406bf506', '8548140487', '129 Smith Harbor, North Andrewshire, WY 77037', '2025-05-14 13:00:14');
-
--- Password: n8BLqg8e
-INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Michael Simon', 'michael.simon@agrifarm.com', 'f3758768c816b15093b37a9638b621fd515d8d63bc78abe129ceca8bb20d2ddb', '512.383.3979', '26688 Hunt Parkway Suite 853, West Mark, IL 38923', '2025-05-14 13:00:14');
-
--- Password: cw9K2q
-INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Renee Phillips', 'renee.phillips@agrifarm.com', 'a4ed782759262116cec3c561c20d6229dd00c4b872f3eaf68a76b01f609a90fb', '(695)507-7237', 'PSC 8325, Box 7156, APO AA 06762', '2025-05-14 13:00:14');
-
--- Password: 72Hi4Mm3Zs
-INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Alan Barnes', 'alan.barnes@agrifarm.com', 'e329fb187abd09b5ed8f2bce050ce64634dd175e3f44da4cafbb3b2c002695c4', '(827)570-0780x71286', '973 Katie Plaza Suite 503, New Dave, CT 76378', '2025-05-14 13:00:14');
-
--- Password: Y0x7KJjAk
-INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Courtney Marsh', 'courtney.marsh@agrifarm.com', '827fcc422fff1d8d9e2cde4f32f7bb0d9f8cb7653a0cebce081a3e8b6f9f31c8', '001-415-421-4939x2408', '424 Oconnor Square, Amandafort, MA 62317', '2025-05-14 13:00:14');
-
--- Password: e323Aga
-INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Dana Knight', 'dana.knight@agrifarm.com', '3f6d06fa6573f2b46ce5a71378b198d5bce6592a4d9391eabd8bd152c96179ce', '853-347-8902x564', '7770 Scott Coves, South Kelly, PA 79777', '2025-05-14 13:00:14');
-
--- Password: Z1zWwz9xCX
-INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, FarmerAddress, CreatedAt) VALUES ('Hannah Cordova', 'hannah.cordova@agrifarm.com', 'c15a5e1a11d769418835d80a39e9fbe703926267a9f1d49aa9517500792b72a1', '(944)150-2892x28867', '017 Destiny Plains Suite 079, Johnsonbury, AK 41813', '2025-05-14 13:00:14');
-
 -- ===============
 -- PRODUCT INSERTS
 -- ===============
 
 INSERT INTO Products (FarmerId, ProductName, ProductCategory, Description, Quantity, UnitPrice, ProductionDate, CreatedAt) VALUES
-(1, 'Chili Peppers', 'Herbs', 'Chili Peppers freshly harvested and packaged for quality.', 133, 25.36, '2025-04-18', '2025-05-14 13:00:14'),
-(2, 'Sweetcorn', 'Poultry', 'Sweetcorn freshly harvested and packaged for quality.', 119, 25.01, '2025-05-07', '2025-05-14 13:00:14'),
-(3, 'Pumpkins', 'Dairy', 'Pumpkins freshly harvested and packaged for quality.', 178, 24.49, '2025-05-07', '2025-05-14 13:00:14'),
-(4, 'Chili Peppers', 'Fruits', 'Chili Peppers freshly harvested and packaged for quality.', 140, 39.15, '2025-05-02', '2025-05-14 13:00:14'),
-(5, 'Free Range Eggs', 'Dairy', 'Free Range Eggs freshly harvested and packaged for quality.', 54, 20.3, '2025-04-18', '2025-05-14 13:00:14'),
-(6, 'Chili Peppers', 'Poultry', 'Chili Peppers freshly harvested and packaged for quality.', 68, 28.56, '2025-05-05', '2025-05-14 13:00:14'),
-(7, 'Goat Cheese', 'Vegetables', 'Goat Cheese freshly harvested and packaged for quality.', 152, 24.94, '2025-04-17', '2025-05-14 13:00:14'),
-(8, 'Spinach', 'Fruits', 'Spinach freshly harvested and packaged for quality.', 148, 18.12, '2025-04-18', '2025-05-14 13:00:14'),
-(9, 'Cucumbers', 'Poultry', 'Cucumbers freshly harvested and packaged for quality.', 102, 26.92, '2025-04-28', '2025-05-14 13:00:14'),
-(10, 'Strawberries', 'Fruits', 'Strawberries freshly harvested and packaged for quality.', 67, 36.64, '2025-05-06', '2025-05-14 13:00:14'),
-(11, 'Goat Cheese', 'Poultry', 'Goat Cheese freshly harvested and packaged for quality.', 165, 36.45, '2025-05-05', '2025-05-14 13:00:14'),
-(12, 'Free Range Eggs', 'Herbs', 'Free Range Eggs freshly harvested and packaged for quality.', 100, 32.2, '2025-04-27', '2025-05-14 13:00:14'),
-(13, 'Organic Tomatoes', 'Vegetables', 'Organic Tomatoes freshly harvested and packaged for quality.', 43, 15.98, '2025-04-30', '2025-05-14 13:00:14'),
-(14, 'Organic Tomatoes', 'Dairy', 'Organic Tomatoes freshly harvested and packaged for quality.', 147, 7.72, '2025-05-04', '2025-05-14 13:00:14'),
-(15, 'Cucumbers', 'Herbs', 'Cucumbers freshly harvested and packaged for quality.', 111, 17.09, '2025-04-17', '2025-05-14 13:00:14'),
-(16, 'Green Beans', 'Herbs', 'Green Beans freshly harvested and packaged for quality.', 120, 6.79, '2025-04-16', '2025-05-14 13:00:14'),
-(17, 'Green Beans', 'Dairy', 'Green Beans freshly harvested and packaged for quality.', 177, 41.72, '2025-05-08', '2025-05-14 13:00:14'),
-(18, 'Green Beans', 'Vegetables', 'Green Beans freshly harvested and packaged for quality.', 196, 32.89, '2025-04-16', '2025-05-14 13:00:14'),
-(19, 'Pumpkins', 'Herbs', 'Pumpkins freshly harvested and packaged for quality.', 130, 28.04, '2025-05-02', '2025-05-14 13:00:14'),
-(20, 'Organic Tomatoes', 'Herbs', 'Organic Tomatoes freshly harvested and packaged for quality.', 118, 20.15, '2025-04-30', '2025-05-14 13:00:14');
+(1, 'Organic Tomatoes', 'Vegetables', 'Organic Tomatoes freshly harvested and packaged for quality.', 122, 16.75, '2025-04-18', '2025-05-14 13:00:14'),
+(1, 'Spinach', 'Fruits', 'Spinach picked this morning and ready for distribution.', 89, 20.40, '2025-04-19', '2025-05-14 13:00:14'),
+(1, 'Chili Peppers', 'Herbs', 'Chili Peppers selected and sorted with freshness guaranteed.', 64, 13.33, '2025-04-20', '2025-05-14 13:00:14'),
+(1, 'Mushrooms', 'Vegetables', 'Mushrooms picked this morning and ready for distribution.', 103, 18.76, '2025-04-21', '2025-05-14 13:00:14'),
+(1, 'Sweetcorn', 'Fruits', 'Sweetcorn freshly harvested and packaged for quality.', 73, 15.25, '2025-04-22', '2025-05-14 13:00:14'),
+(1, 'Pumpkins', 'Dairy', 'Pumpkins selected and sorted with freshness guaranteed.', 97, 23.45, '2025-04-23', '2025-05-14 13:00:14'),
+(1, 'Goat Cheese', 'Dairy', 'Goat Cheese picked this morning and ready for distribution.', 85, 27.30, '2025-04-24', '2025-05-14 13:00:14'),
+(1, 'Free Range Eggs', 'Poultry', 'Free Range Eggs freshly harvested and packaged for quality.', 60, 21.99, '2025-04-25', '2025-05-14 13:00:14'),
+(2, 'Organic Chicken', 'Poultry', 'Organic Chicken selected and sorted with freshness guaranteed.', 45, 35.00, '2025-04-26', '2025-05-14 13:00:14'),
+(2, 'Grass-fed Beef', 'Meat', 'Grass-fed Beef picked this morning and ready for distribution.', 30, 50.00, '2025-04-27', '2025-05-14 13:00:14'),
+(2, 'Almond Milk', 'Dairy', 'Almond Milk freshly harvested and packaged for quality.', 55, 12.50, '2025-04-28', '2025-05-14 13:00:14'),
+(2, 'Organic Honey', 'Sweeteners', 'Organic Honey selected and sorted with freshness guaranteed.', 40, 18.99, '2025-04-29', '2025-05-14 13:00:14'),
+(2, 'Fresh Basil', 'Herbs', 'Fresh Basil picked this morning and ready for distribution.', 70, 10.75, '2025-04-30', '2025-05-14 13:00:14'),
+(2, 'Organic Apples', 'Fruits', 'Organic Apples freshly harvested and packaged for quality.', 90, 15.50, '2025-05-01', '2025-05-14 13:00:14'),
+(2, 'Carrots', 'Vegetables', 'Carrots selected and sorted with freshness guaranteed.', 110, 8.99, '2025-05-02', '2025-05-14 13:00:14'),
+(2, 'Organic Strawberries', 'Fruits', 'Organic Strawberries picked this morning and ready for distribution.', 80, 22.50, '2025-05-03', '2025-05-14 13:00:14'),
+(3, 'Cucumbers', 'Vegetables', 'Cucumbers freshly harvested and packaged for quality.', 95, 9.99, '2025-05-04', '2025-05-14 13:00:14'),
+(3, 'Organic Blueberries', 'Fruits', 'Organic Blueberries selected and sorted with freshness guaranteed.', 65, 14.99, '2025-05-05', '2025-05-14 13:00:14'),
+(3, 'Organic Yogurt', 'Dairy', 'Organic Yogurt picked this morning and ready for distribution.', 50, 6.50, '2025-05-06', '2025-05-14 13:00:14'),
+(3, 'Fresh Oregano', 'Herbs', 'Fresh Oregano freshly harvested and packaged for quality.', 75, 11.25, '2025-05-07', '2025-05-14 13:00:14'),
+(3, 'Organic Peaches', 'Fruits', 'Organic Peaches selected and sorted with freshness guaranteed.', 85, 17.50, '2025-05-08', '2025-05-14 13:00:14'),
+(3, 'Free Range Chicken Eggs', 'Poultry', 'Free Range Chicken Eggs picked this morning and ready for distribution.', 60, 24.99, '2025-05-09', '2025-05-14 13:00:14'),
+(3, 'Organic Quinoa', 'Grains', 'Organic Quinoa freshly harvested and packaged for quality.', 40, 30.00, '2025-05-10', '2025-05-14 13:00:14'),
+(3, 'Grass-fed Lamb', 'Meat', 'Grass-fed Lamb selected and sorted with freshness guaranteed.', 20, 55.00, '2025-05-11', '2025-05-14 13:00:14'),
+(4, 'Organic Garlic', 'Vegetables', 'Organic Garlic picked this morning and ready for distribution.', 100, 7.50, '2025-05-12', '2025-05-14 13:00:14'),
+(4, 'Fresh Cilantro', 'Herbs', 'Fresh Cilantro freshly harvested and packaged for quality.', 80, 9.99, '2025-05-13', '2025-05-14 13:00:14'),
+(4, 'Organic Walnuts', 'Nuts & Seeds', 'Organic Walnuts selected and sorted with freshness guaranteed.', 45, 15.00, '2025-05-14', '2025-05-14 13:00:14'),
+(4, 'Organic Coconut Milk', 'Dairy', 'Organic Coconut Milk picked this morning and ready for distribution.', 55, 12.00, '2025-05-15', '2025-05-14 13:00:14'),
+(4, 'Organic Grapes', 'Fruits', 'Organic Grapes freshly harvested and packaged for quality.', 70, 18.50, '2025-05-16', '2025-05-14 13:00:14'),
+(4, 'Organic Chia Seeds', 'Nuts & Seeds', 'Organic Chia Seeds selected and sorted with freshness guaranteed.', 60, 22.00, '2025-05-17', '2025-05-14 13:00:14'),
+(4, 'Organic Almond Butter', 'Sweeteners', 'Organic Almond Butter picked this morning and ready for distribution.', 50, 25.00, '2025-05-18', '2025-05-14 13:00:14'),
+(4, 'Organic Pumpkin Seeds', 'Nuts & Seeds', 'Organic Pumpkin Seeds freshly harvested and packaged for quality.', 40, 20.00, '2025-05-19', '2025-05-14 13:00:14'),
+(5, 'Organic Cauliflower', 'Vegetables', 'Organic Cauliflower selected and sorted with freshness guaranteed.', 90, 10.00, '2025-05-20', '2025-05-14 13:00:14'),
+(5, 'Organic Zucchini', 'Vegetables', 'Organic Zucchini picked this morning and ready for distribution.', 85, 12.50, '2025-05-21', '2025-05-14 13:00:14'),
+(5, 'Organic Carrots', 'Vegetables', 'Organic Carrots freshly harvested and packaged for quality.', 100, 8.00, '2025-05-22', '2025-05-14 13:00:14'),
+(5, 'Organic Bell Peppers', 'Vegetables', 'Organic Bell Peppers selected and sorted with freshness guaranteed.', 75, 11.00, '2025-05-23', '2025-05-14 13:00:14'),
+(5, 'Organic Cucumbers', 'Vegetables', 'Organic Cucumbers picked this morning and ready for distribution.', 80, 9.50, '2025-05-24', '2025-05-14 13:00:14'),
+(5, 'Organic Eggplant', 'Vegetables', 'Organic Eggplant freshly harvested and packaged for quality.', 70, 10.50, '2025-05-25', '2025-05-14 13:00:14'),
+(6, 'Organic Sweet Potatoes', 'Vegetables', 'Organic Sweet Potatoes selected and sorted with freshness guaranteed.', 60, 7.50, '2025-05-26', '2025-05-14 13:00:14'),
+(6, 'Organic Butternut Squash', 'Vegetables', 'Organic Butternut Squash picked this morning and ready for distribution.', 55, 8.50, '2025-05-27', '2025-05-14 13:00:14'),
+(6, 'Organic Beets', 'Vegetables', 'Organic Beets freshly harvested and packaged for quality.', 50, 9.00, '2025-05-28', '2025-05-14 13:00:14'),
+(6, 'Organic Radishes ', 'Vegetables', 'Organic Radishes selected and sorted with freshness guaranteed.', 45, 6.50, '2025-05-29', '2025-05-14 13:00:14'),
+(6, 'Organic Green Beans', 'Vegetables', 'Organic Green Beans picked this morning and ready for distribution.', 40, 7.00, '2025-05-30', '2025-05-14 13:00:14'),
+(6, 'Organic Peas', 'Vegetables', 'Organic Peas freshly harvested and packaged for quality.', 35, 8.00, '2025-05-31', '2025-05-14 13:00:14'),
+(7, 'Organic Lettuce', 'Vegetables', 'Organic Lettuce selected and sorted with freshness guaranteed.', 30, 5.50, '2025-06-01', '2025-05-14 13:00:14'),
+(7, 'Organic Kale', 'Vegetables', 'Organic Kale picked this morning and ready for distribution.', 25, 6.00, '2025-06-02', '2025-05-14 13:00:14'),
+(7, 'Organic Collard Greens', 'Vegetables', 'Organic Collard Greens freshly harvested and packaged for quality.', 20, 7.00, '2025-06-03', '2025-05-14 13:00:14'),
+(7, 'Organic Swiss Chard', 'Vegetables', 'Organic Swiss Chard selected and sorted with freshness guaranteed.', 15, 8.00, '2025-06-04', '2025-05-14 13:00:14'),
+(7, 'Organic Arugula', 'Vegetables', 'Organic Arugula picked this morning and ready for distribution.', 10, 9.00, '2025-06-05', '2025-05-14 13:00:14'),
+(7, 'Organic Bok Choy', 'Vegetables', 'Organic Bok Choy freshly harvested and packaged for quality.', 5, 10.00, '2025-06-06', '2025-05-14 13:00:14'),
+(8, 'Organic Cilantro', 'Herbs', 'Organic Cilantro selected and sorted with freshness guaranteed.', 100, 11.50, '2025-06-07', '2025-05-14 13:00:14'),
+(8, 'Organic Parsley', 'Herbs', 'Organic Parsley picked this morning and ready for distribution.', 90, 12.50, '2025-06-08', '2025-05-14 13:00:14'),
+(8, 'Organic Thyme', 'Herbs', 'Organic Thyme freshly harvested and packaged for quality.', 80, 13.50, '2025-06-09', '2025-05-14 13:00:14'),
+(8, 'Organic Rosemary', 'Herbs', 'Organic Rosemary selected and sorted with freshness guaranteed.', 70, 14.50, '2025-06-10', '2025-05-14 13:00:14'),
+(8, 'Organic Sage', 'Herbs', 'Organic Sage picked this morning and ready for distribution.', 60, 15.50, '2025-06-11', '2025-05-14 13:00:14'),
+(8, 'Organic Dill', 'Herbs', 'Organic Dill freshly harvested and packaged for quality.', 50, 16.50, '2025-06-12', '2025-05-14 13:00:14'),
+(9, 'Organic Mint', 'Herbs', 'Organic Mint selected and sorted with freshness guaranteed.', 40, 17.50, '2025-06-13', '2025-05-14 13:00:14'),
+(9, 'Organic Fennel', 'Herbs', 'Organic Fennel picked this morning and ready for distribution.', 30, 18.50, '2025-06-14', '2025-05-14 13:00:14'),
+(9, 'Organic Tarragon', 'Herbs', 'Organic Tarragon freshly harvested and packaged for quality.', 20, 19.50, '2025-06-15', '2025-05-14 13:00:14'),
+(9, 'Organic Chervil', 'Herbs', 'Organic Chervil selected and sorted with freshness guaranteed.', 10, 20.50, '2025-06-16', '2025-05-14 13:00:14'),
+(9, 'Organic Bay Leaves', 'Herbs', 'Organic Bay Leaves picked this morning and ready for distribution.', 5, 21.50, '2025-06-17', '2025-05-14 13:00:14'),
+(9, 'Organic Lemongrass', 'Herbs', 'Organic Lemongrass freshly harvested and packaged for quality.', 3, 22.50, '2025-06-18', '2025-05-14 13:00:14'),
+(10, 'Organic Ginger', 'Herbs', 'Organic Ginger selected and sorted with freshness guaranteed.', 2, 23.50, '2025-06-19', '2025-05-14 13:00:14'),
+(10, 'Organic Turmeric', 'Herbs', 'Organic Turmeric picked this morning and ready for distribution.', 1, 24.50, '2025-06-20', '2025-05-14 13:00:14'),
+(10, 'Organic Wasabi', 'Herbs', 'Organic Wasabi freshly harvested and packaged for quality.', 1, 25.50, '2025-06-21', '2025-05-14 13:00:14'),
+(10, 'Organic Horseradish', 'Herbs', 'Organic Horseradish selected and sorted with freshness guaranteed.', 1, 26.50, '2025-06-22', '2025-05-14 13:00:14'),
+(10, 'Organic Cilantro Lime Rice', 'Grains', 'Organic Cilantro Lime Rice picked this morning and ready for distribution.', 1, 27.50, '2025-06-23', '2025-05-14 13:00:14'),
+(10, 'Organic Coconut Rice', 'Grains', 'Organic Coconut Rice freshly harvested and packaged for quality.', 1, 28.50, '2025-06-24', '2025-05-14 13:00:14'),
+(10, 'Organic Jasmine Rice', 'Grains', 'Organic Jasmine Rice selected and sorted with freshness guaranteed.', 1, 29.50, '2025-06-25', '2025-05-14 13:00:14'),
+(10, 'Organic Basmati Rice', 'Grains', 'Organic Basmati Rice picked this morning and ready for distribution.', 1, 30.50, '2025-06-26', '2025-05-14 13:00:14'),
+(10, 'Organic Brown Rice', 'Grains', 'Organic Brown Rice freshly harvested and packaged for quality.', 1, 31.50, '2025-06-27', '2025-05-14 13:00:14');

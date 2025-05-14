@@ -112,6 +112,29 @@ Employees can see all products and apply filters to help with trend analysis and
    ```bash
    dotnet run
 ---
+
+## Test Credentials
+Below are test credentials you can use to test the Agri-Energy Connect Prototype.
+
+**Employee** 
+- Email: kaitlin.levy@agrienergy.com
+- Password: 62jMW7z
+
+**Farmer**
+- Email: makayla.bryant@agrifarm.com
+- Password: 4DG0bgy
+
+
+## Application Navigation 
+**Step 1:** Click on the Login button on the top right of the screen.
+
+![step1](<Screenshot 2025-05-14 164936.png>)
+
+**Step 2:** Enter the test email and password for an employee _(you can get this from the section above called 'Test Credentials')_, and select 'Employee' from the dropdown box.
+
+![step2](<Screenshot 2025-05-14 165408.png>)
+
+**Step 3:** Once logged in, you can 
 ## 👩‍💻 Developer
 - Melissa Govender
 - Student No: ST10339549
