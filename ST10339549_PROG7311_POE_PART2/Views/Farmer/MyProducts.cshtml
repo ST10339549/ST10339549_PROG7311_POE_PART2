@@ -1,0 +1,34 @@
+@model IEnumerable<ST10339549_PROG7311_POE_PART2.Models.Product>
+@{
+    ViewData["Title"] = "My Products";
+}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container mt-4">
+    <h2 class="mb-4">My Products</h2>
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Qty</th>
+                <th>Price</th>
+                <th>Production Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.ProductName</td>
+                    <td>@product.ProductCategory</td>
+                    <td>@product.Description</td>
+                    <td>@product.Quantity</td>
+                    <td>R @product.UnitPrice.ToString("F2")</td>
+                    <td>@product.ProductionDate.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

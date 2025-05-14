@@ -1,8 +1,8 @@
-using Microsoft.AspNetCore.Mvc;
-using ST10339549_PROG7311_POE_PART2.Repository.Interfaces;
-using ST10339549_PROG7311_POE_PART2.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
+using ST10339549_PROG7311_POE_PART2.Models;
+using ST10339549_PROG7311_POE_PART2.Repository.Interfaces;
 using System.Security.Claims;
 
 namespace ST10339549_PROG7311_POE_PART2.Controllers
@@ -56,7 +56,7 @@ namespace ST10339549_PROG7311_POE_PART2.Controllers
                 }
             }
 
-            if (!isValid) 
+            if (!isValid)
             {
                 ViewBag.LoginError = "Invalid email, password, or role selected.";
                 return View();
@@ -64,7 +64,7 @@ namespace ST10339549_PROG7311_POE_PART2.Controllers
 
             var principal = new ClaimsPrincipal(identity);
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
-            
+
             // Redirect to role-specific pages
             if (role == UserRole.Farmer)
                 return RedirectToAction("MyProducts", "Farmer");
