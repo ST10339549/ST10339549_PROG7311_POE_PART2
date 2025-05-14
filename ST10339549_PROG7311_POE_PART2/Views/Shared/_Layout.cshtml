@@ -3,11 +3,15 @@
 <head>
     <title>@ViewData["Title"] - Agri-Energy Connect</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">Agri-Energy Connect</a>
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <i class="fas fa-leaf me-2 text-light"></i>
+                <span>Agri-Energy Connect</span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -19,19 +23,27 @@
                         if (User.IsInRole("Farmer"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link" asp-controller="Farmer" asp-action="MyProducts">My Products</a>
+                                <a class="nav-link" asp-controller="Farmer" asp-action="MyProducts">
+                                    <i class="fas fa-seedling me-1"></i> My Products
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" asp-controller="Farmer" asp-action="AddProduct">Add Product</a>
+                                <a class="nav-link" asp-controller="Farmer" asp-action="AddProduct">
+                                    <i class="fas fa-plus-circle me-1"></i> Add Product
+                                </a>
                             </li>
                         }
                         else if (User.IsInRole("Employee"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link" asp-controller="Employee" asp-action="AddFarmer">Add Farmer</a>
+                                <a class="nav-link" asp-controller="Employee" asp-action="AddFarmer">
+                                    <i class="fas fa-user-plus me-1"></i> Add Farmer
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" asp-controller="Employee" asp-action="FilterProducts">Filter Products</a>
+                                <a class="nav-link" asp-controller="Employee" asp-action="FilterProducts">
+                                    <i class="fas fa-filter me-1"></i> Filter Products
+                                </a>
                             </li>
                         }
                     }
@@ -42,19 +54,23 @@
                     {
                         <li class="nav-item">
                             <span class="navbar-text me-3 text-light">
-                                Welcome, @User.Identity.Name
+                                <i class="fas fa-user me-1"></i> Welcome, @User.Identity.Name
                             </span>
                         </li>
                         <li class="nav-item">
                             <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
-                                <button type="submit" class="btn btn-outline-light btn-sm">Logout</button>
+                                <button type="submit" class="btn btn-outline-light btn-sm">
+                                    <i class="fas fa-sign-out-alt me-1"></i> Logout
+                                </button>
                             </form>
                         </li>
                     }
                     else
                     {
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Account" asp-action="Login">Login</a>
+                            <a class="nav-link" asp-controller="Account" asp-action="Login">
+                                <i class="fas fa-sign-in-alt me-1"></i> Login
+                            </a>
                         </li>
                     }
                 </ul>
@@ -66,6 +82,19 @@
         @RenderBody()
     </div>
 
+    <div id="loader" class="d-none position-fixed top-0 start-0 w-100 h-100 bg-white bg-opacity-75 d-flex justify-content-center align-items-center" style="z-index:1050;">
+        <div class="spinner-border text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll("form").forEach(form => {
+            form.addEventListener("submit", () => {
+                document.getElementById("loader").classList.remove("d-none");
+            });
+        });
+    </script>
 </body>
 </html>
