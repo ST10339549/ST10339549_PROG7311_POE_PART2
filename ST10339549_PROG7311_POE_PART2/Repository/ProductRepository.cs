@@ -20,7 +20,7 @@ namespace ST10339549_PROG7311_POE_PART2.Repository
         {
             using var connection = CreateConnection();
             return await connection.QuerySingleOrDefaultAsync<Product>(
-                "SELECT * FROM Products WHERE ProductId = @Id", 
+                "SELECT * FROM Products WHERE ProductId = @Id",
                 new { Id = id });
         }
 
@@ -28,7 +28,7 @@ namespace ST10339549_PROG7311_POE_PART2.Repository
         {
             using var connection = CreateConnection();
             return await connection.QueryAsync<Product>(
-                "SELECT * FROM Products WHERE FarmerId = @FarmerId", 
+                "SELECT * FROM Products WHERE FarmerId = @FarmerId",
                 new { FarmerId = farmerId });
         }
 
@@ -36,7 +36,7 @@ namespace ST10339549_PROG7311_POE_PART2.Repository
         {
             using var connection = CreateConnection();
             entity.CreatedAt = DateTime.Now;
-            
+
             var sql = @"
                 INSERT INTO Products (FarmerId, ProductName, ProductCategory, Description, 
                                      Quantity, UnitPrice, ProductionDate, CreatedAt)
@@ -50,7 +50,7 @@ namespace ST10339549_PROG7311_POE_PART2.Repository
         public async Task<bool> UpdateAsync(Product entity)
         {
             using var connection = CreateConnection();
-            
+
             var sql = @"
                 UPDATE Products
                 SET FarmerId = @FarmerId, 
@@ -69,9 +69,9 @@ namespace ST10339549_PROG7311_POE_PART2.Repository
         public async Task<bool> DeleteAsync(int id)
         {
             using var connection = CreateConnection();
-            
+
             var sql = "DELETE FROM Products WHERE ProductId = @Id";
-            
+
             var rowsAffected = await connection.ExecuteAsync(sql, new { Id = id });
             return rowsAffected > 0;
         }
@@ -85,7 +85,7 @@ namespace ST10339549_PROG7311_POE_PART2.Repository
         public async Task<IEnumerable<Product>> FilterProductsAsync(string? category, DateTime? fromDate, DateTime? toDate)
         {
             using var connection = CreateConnection();
-            
+
             var sql = "SELECT * FROM Products WHERE 1=1";
             var parameters = new DynamicParameters();
 

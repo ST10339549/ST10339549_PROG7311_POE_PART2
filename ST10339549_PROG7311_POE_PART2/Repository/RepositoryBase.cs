@@ -1,4 +1,3 @@
-using Dapper;
 using System.Data;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
@@ -28,7 +27,7 @@ namespace ST10339549_PROG7311_POE_PART2.Repository
             {
                 // Convert the password to a byte array and compute the hash
                 byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                
+
                 // Convert the hashed byte array to a string
                 var builder = new StringBuilder();
                 for (int i = 0; i < hashedBytes.Length; i++)

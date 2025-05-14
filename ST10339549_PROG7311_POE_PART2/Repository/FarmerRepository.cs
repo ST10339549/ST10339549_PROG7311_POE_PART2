@@ -1,9 +1,6 @@
 using Dapper;
 using ST10339549_PROG7311_POE_PART2.Models;
 using ST10339549_PROG7311_POE_PART2.Repository.Interfaces;
-using System.Security.Cryptography;
-using System.Text;
-using Microsoft.Extensions.Logging;
 
 namespace ST10339549_PROG7311_POE_PART2.Repository
 {
@@ -26,7 +23,7 @@ namespace ST10339549_PROG7311_POE_PART2.Repository
         {
             using var connection = CreateConnection();
             return await connection.QuerySingleOrDefaultAsync<Farmer>(
-                "SELECT * FROM Farmers WHERE FarmerId = @Id", 
+                "SELECT * FROM Farmers WHERE FarmerId = @Id",
                 new { Id = id });
         }
 
@@ -34,7 +31,7 @@ namespace ST10339549_PROG7311_POE_PART2.Repository
         {
             using var connection = CreateConnection();
             return await connection.QuerySingleOrDefaultAsync<Farmer>(
-                "SELECT * FROM Farmers WHERE FarmerEmail = @Email", 
+                "SELECT * FROM Farmers WHERE FarmerEmail = @Email",
                 new { Email = email });
         }
 
@@ -42,10 +39,10 @@ namespace ST10339549_PROG7311_POE_PART2.Repository
         {
             using var connection = CreateConnection();
             entity.CreatedAt = DateTime.Now;
-            
+
             // Hash the password before storing
             entity.FarmerPasswordHash = HashPassword(entity.FarmerPasswordHash);
-            
+
             var sql = @"
                 INSERT INTO Farmers (FarmerName, FarmerEmail, FarmerPasswordHash, FarmerPhoneNumber, 
                                      FarmerAddress, CreatedAt)
@@ -59,7 +56,7 @@ namespace ST10339549_PROG7311_POE_PART2.Repository
         public async Task<bool> UpdateAsync(Farmer entity)
         {
             using var connection = CreateConnection();
-            
+
             var sql = @"
                 UPDATE Farmers
                 SET FarmerName = @FarmerName, 
@@ -76,9 +73,9 @@ namespace ST10339549_PROG7311_POE_PART2.Repository
         public async Task<bool> DeleteAsync(int id)
         {
             using var connection = CreateConnection();
-            
+
             var sql = "DELETE FROM Farmers WHERE FarmerId = @Id";
-            
+
             var rowsAffected = await connection.ExecuteAsync(sql, new { Id = id });
             return rowsAffected > 0;
         }
@@ -93,15 +90,15 @@ namespace ST10339549_PROG7311_POE_PART2.Repository
             }
 
             bool isValid = VerifyPassword(farmer.FarmerPasswordHash, password);
-            
+
             if (!isValid)
             {
-                _logger?.LogWarning("Failed login attempt for farmer: {FarmerId}, Email: {Email}", 
+                _logger?.LogWarning("Failed login attempt for farmer: {FarmerId}, Email: {Email}",
                     farmer.FarmerId, email);
             }
             else
             {
-                _logger?.LogInformation("Successful login for farmer: {FarmerId}, Email: {Email}", 
+                _logger?.LogInformation("Successful login for farmer: {FarmerId}, Email: {Email}",
                     farmer.FarmerId, email);
             }
 
