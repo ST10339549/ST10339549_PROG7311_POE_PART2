@@ -176,4 +176,4 @@ Below are test credentials you can use to test the Agri-Energy Connect Prototype
 - Melissa Govender
 - Student No: ST10339549
 - Institution: Varsity College Durban North
-- Module: Enterprise Application Development (PROG7311)
+- Module: Programming 3A (PROG7311)
