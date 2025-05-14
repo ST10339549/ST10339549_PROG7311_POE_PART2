@@ -130,45 +130,45 @@ Below are test credentials you can use to test the Agri-Energy Connect Prototype
 
 **Step 1:** Click on the Login button on the top right of the screen.
 
-![step1](<Screenshot 2025-05-14 164936.png>)
+![step1](<screenshots/Screenshot 2025-05-14 164936.png>)
 
 **Step 2:** Enter the test email and password for an employee _(you can get this from the section above called 'Test Credentials')_, and select 'Employee' from the dropdown box.
 
-![step2](<Screenshot 2025-05-14 165408.png>)
+![step2](<screenshots/Screenshot 2025-05-14 165408.png>)
 
 **Step 3:** Once logged in, you can view registered, or edit and delete a farmer from the main employee screen. You can also select 'Add Farmer' and 'Filter Products' from the top navbar.
 
-![step3](image-1.png)
+![step3](screenshots/image-1.png)
 
 **Step 4:** If you select 'Add Farmer', you can fill out the farmers details to register a new farmer using the form and then selecting the 'Register Farmer' button.
 
-![step4](<Screenshot 2025-05-14 165544.png>)
+![step4](<screenshots/Screenshot 2025-05-14 165544.png>)
 
 **Step 5:** Once the 'Register Farmer' button is selected, you're navigated back to the main page where you can view all the farmers (including the new farmer that you've added).
 
-![step5](image-2.png)
+![step5](screenshots/image-2.png)
 
 **Step 6:** If you select the 'Filter Products' button, you can filter through products by Category and Date. 
 
-![step6](image-3.png)
+![step6](screenshots/image-3.png)
 
 ### Farmer
 
 **Step 1:** Click on the Login button on the top right of the screen.
 
-![step1](<Screenshot 2025-05-14 164936.png>)
+![step1](<screenshots/Screenshot 2025-05-14 164936.png>)
 
 **Step 2:** Enter the test email and password for a farmer _(you can get this from the section above called 'Test Credentials')_, and select 'Farmer' from the dropdown box.
 
-![step2](image-4.png)
+![step2](screenshots/image-4.png)
 
 **Step 3:** Once logged in, you can view products, or edit and delete a product from the main farmer screen. You can also select 'Add Product' and 'My Product' from the top navbar.
 
-![step3](image-5.png)
+![step3](screenshots/image-5.png)
 
 **Step 4:** If you select 'Add Product', you can fill out the products details to add a new product using the form and then selecting the 'Submit Product' button.
 
-![step4](image-6.png)
+![step4](screenshots/image-6.png)
 
 **Step 5:** If you select 'My Products', you can view all your products, as well as edit and delete them. 
 
